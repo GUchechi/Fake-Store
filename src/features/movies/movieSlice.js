@@ -28,9 +28,16 @@ const movieSlice = createSlice({
   },
   extraReducer: {
     [fetchAsyncMovies.pending]: () => {
-      console.log('Pending')
-    }
-  }
+      console.log("Pending");
+    },
+    [fetchAsyncMovies.fulfilled]: (state, { payload }) => {
+      console.log("Fetched Successfully");
+      return { ...state, movies: payload };
+    },
+    [fetchAsyncMovies.rejected]: () => {
+      console.log("Rejected!");
+    },
+  },
 });
 
 export const { addMovies } = movieSlice.actions;
