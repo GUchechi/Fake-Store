@@ -27,6 +27,7 @@ export const fetchAsyncShows = createAsyncThunk(
 
 const initialState = {
   movies: {},
+  shows: {},
 };
 
 const movieSlice = createSlice({
@@ -39,7 +40,7 @@ const movieSlice = createSlice({
   },
   extraReducer: {
     [fetchAsyncMovies.pending]: () => {
-      console.log('pending');
+      console.log("pending");
     },
     [fetchAsyncMovies.fulfilled]: (state, { payload }) => {
       console.log("Fetched Successfully");
@@ -47,6 +48,10 @@ const movieSlice = createSlice({
     },
     [fetchAsyncMovies.rejected]: () => {
       console.log("Rejected!");
+    },
+    [fetchAsyncShows.fulfilled]: (state, { payload }) => {
+      console.log("Fetched Successfully!");
+      return { ...state, shows: payload };
     },
   },
 });
