@@ -26,6 +26,11 @@ const movieSlice = createSlice({
       state.movies = payload;
     },
   },
+  extraReducer: {
+    [fetchAsyncMovies.pending]: () => {
+      console.log('Pending')
+    }
+  }
 });
 
 export const { addMovies } = movieSlice.actions;
