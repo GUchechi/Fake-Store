@@ -1,13 +1,14 @@
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
+import ProductComponent from "./ProductComponent";
 
 const ProductListing = () => {
-    const products = useSelector((state) => state)
-    console.log(products)
+  const products = useSelector((state) => state);
+  console.log(products);
   return (
-    <div>
-      Product Listing
+    <div className="ui grid container">
+      <ProductComponent />
     </div>
-  )
-}
+  );
+};
 
-export default ProductListing
+export default ProductListing;
