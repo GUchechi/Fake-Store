@@ -10,6 +10,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(fetchAsyncMovies());
   }, [dispatch]);
+
   return (
     <div>
       <div className="banner-img"></div>
