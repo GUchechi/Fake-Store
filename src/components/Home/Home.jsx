@@ -6,17 +6,12 @@ import { APIKey } from "../../apis/MovieApiKey";
 import { addMovies } from "../../features/movies/movieSlice";
 
 const Home = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
 
   useEffect(() => {
     const movieText = "Harry";
     const fetchMovies = async () => {
-      const response = await movieApi
-        .get(`?apikey=${APIKey}&s=${movieText}&type=movie`)
-        .catch((err) => {
-          console.log("Err:", err);
-        });
-        dispatch(addMovies(response.data))
+    
     };
     fetchMovies();
   }, []);
