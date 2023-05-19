@@ -21,17 +21,7 @@ const MovieListing = () => {
     );
   }
 
-  if (shows.Response === "True") {
-    renderShows = shows.Search.map((show, index) => (
-      <MovieCard key={index} data={show} />
-    ));
-  } else {
-    renderShows = (
-      <div className="shows-error">
-        <h3>{shows.Error}</h3>
-      </div>
-    );
-  }
+ 
 
   return (
     <div className="movie-wrapper">
