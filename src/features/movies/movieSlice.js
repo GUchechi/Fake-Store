@@ -40,13 +40,7 @@ const initialState = {
 };
 
 const movieSlice = createSlice({
-  name: "movies",
-  initialState,
-  reducers: {
-    addMovies: (state, { payload }) => {
-      state.movies = payload;
-    },
-  },
+
   extraReducers: (builder) => {
     builder
       .addCase(fetchAsyncMovies.pending, () => {
