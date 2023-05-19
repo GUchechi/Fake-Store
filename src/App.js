@@ -13,7 +13,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/movie/:movieId" element={<MovieDetail />} />
+          <Route path="/movie/:imdbID" element={<MovieDetail />} />
           <Route element={<PageNotFound />} />
         </Routes>
       </div>
