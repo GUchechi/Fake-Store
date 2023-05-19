@@ -33,11 +33,7 @@ export const fetchAsyncMovieOrShowDetail = createAsyncThunk(
   }
 );
 
-const initialState = {
-  movies: {},
-  shows: {},
-  selectMovieOrShow: {},
-};
+
 
 const movieSlice = createSlice({
   name: "movies",
