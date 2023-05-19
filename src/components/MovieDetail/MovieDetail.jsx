@@ -10,9 +10,7 @@ import {
 
 
 const MovieDetail = () => {
-  const { imdbID } = useParams();
-  const dispatch = useDispatch();
-  const data = useSelector(getSelectedMovieOrShow);
+
 
   console.log(data)
 
