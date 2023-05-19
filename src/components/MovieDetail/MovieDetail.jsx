@@ -55,7 +55,7 @@ const MovieDetail = () => {
                 <span>{data.Actors}</span>
               </div>
               <div>
-                <span>Generes</span>
+                <span>Genres</span>
                 <span>{data.Genre}</span>
               </div>
               <div>
