@@ -25,13 +25,7 @@ export const fetchAsyncShows = createAsyncThunk(
   }
 );
 
-export const fetchAsyncMovieOrShowDetail = createAsyncThunk(
-  "movies/fetchAsyncMovieOrShowDetail",
-  async (id) => {
-    const response = await movieApi.get(`?apiKey=${APIKey}&i=${id}&Plot=full`);
-    return response.data;
-  }
-);
+
 
 const initialState = {
   movies: {},
