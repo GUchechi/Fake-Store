@@ -56,7 +56,9 @@ const movieSlice = createSlice({
         console.log("Fetched movies successfully!");
         state.movies = payload;
       })
-     
+      .addCase(fetchAsyncMovies.rejected, () => {
+        console.log("Failed to fetch movies!");
+      })
       .addCase(fetchAsyncShows.fulfilled, (state, { payload }) => {
         console.log("Fetched shows successfully!");
         state.shows = payload;
