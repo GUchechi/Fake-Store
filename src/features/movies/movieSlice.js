@@ -63,10 +63,7 @@ const movieSlice = createSlice({
         console.log("Fetched shows successfully!");
         state.shows = payload;
       })
-      .addCase(fetchAsyncMovieOrShowDetail.fulfilled, (state, { payload }) => {
-        console.log("Fetched Successfully!");
-        return { ...state, selectMovieOrShow: payload };
-      });
+     
   },
 });
 
