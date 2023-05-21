@@ -39,14 +39,7 @@ const initialState = {
   selectMovieOrShow: {},
 };
 
-const movieSlice = createSlice({
-  name: "movies",
-  initialState,
-  reducers: {
-    removeSelectedMovieOrShow: (state) => {
-      state.selectMovieOrShow = {};
-    },
-  },
+
   extraReducers: (builder) => {
     builder
       .addCase(fetchAsyncMovies.pending, () => {
