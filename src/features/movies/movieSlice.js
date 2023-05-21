@@ -52,10 +52,7 @@ const movieSlice = createSlice({
       .addCase(fetchAsyncMovies.pending, () => {
         console.log("Fetching movies...");
       })
-      .addCase(fetchAsyncMovies.fulfilled, (state, { payload }) => {
-        console.log("Fetched movies successfully!");
-        state.movies = payload;
-      })
+      
       .addCase(fetchAsyncMovies.rejected, () => {
         console.log("Failed to fetch movies!");
       })
